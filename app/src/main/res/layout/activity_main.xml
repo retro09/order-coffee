@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:context="in.stupidideas.www.justjava.MainActivity"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/Name"
+            android:inputType="textCapWords"
+            />
+
+        <TextView
+            android:id="@+id/toppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/Toppings"
+            android:textSize="16sp"
+
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <CheckBox
+                android:id="@+id/whipped_cream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Whipped_Cream"
+                android:layout_marginRight="16dp"
+                />
+            <CheckBox
+                android:id="@+id/chocolate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Chocolate"
+                android:layout_marginRight="16dp"
+                />
+            <CheckBox
+                android:id="@+id/nutella"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Nutella"
+                />
+            <CheckBox
+                android:id="@+id/nutmeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Nutmeg"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Quantity"
+            android:textAllCaps="false"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.09">
+
+            <Button
+                android:id="@+id/inc"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+
+                android:layout_marginStart="36dp"
+                android:onClick="Increment"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_marginStart="59dp"
+                android:layout_toEndOf="@+id/inc"
+                android:text="1"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/dec"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+
+                android:layout_alignBaseline="@+id/inc"
+                android:layout_alignBottom="@+id/inc"
+                android:layout_marginStart="59dp"
+                android:layout_toEndOf="@+id/quantity_text_view"
+                android:onClick="Decrement"
+                android:text="-" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/OrderSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dec"
+            android:layout_marginTop="16dp"
+            android:text="@string/Order_Summary"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/price_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OrderSummary"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:text="$5"
+            android:textColor="#000000"
+            android:textSize="16sp"
+
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_text_view"
+            android:layout_marginBottom="16dp"
+            android:onClick="submitOrder"
+            android:text="@string/Order" />
+
+
+    </LinearLayout>
+</ScrollView>
